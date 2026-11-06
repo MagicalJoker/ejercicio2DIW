@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula Virtual - Lección Multimedia</title>
+    <meta name="description"
+        content="Lección interactiva multimedia sobre reproductores accesibles y medios adaptativos en HTML5.">
+    <meta name="author" content="Aula Virtual DAW">
+</head>
+
+<body>
+
+    <!-- Contenido principal -->
+    <main>
+        <h1>Unidad 3: Reproductores y Medios Adaptativos</h1>
+
+        <!-- Videoclase -->
+        <section class="video-section">
+            <h2>Videoclase Interactiva</h2>
+
+            <!--vídeo con pie explicativo -->
+            <figure class="video-figure">
+                <!-- Reproductor accesible con controles, precarga de metadatos y portada (Sí, he usado como portada el esquema XD) -->
+                <video controls preload="metadata" poster="poster-clase.jpg" width="640" height="360">
+                    <!-- vídeo en WebM y MP4 -->
+                    <source src="clase.webm" type="video/webm">
+                    <source src="clase.mp4" type="video/mp4">
+
+                    <!-- Subtítulos sincronizados WebVTT (Solo unos segunditos, mucho es)-->
+                    <track kind="subtitles" src="subtitulos-es.vtt" srclang="es" label="Español (Subtítulos)" default>
+
+                    <p>Tu navegador no soporta vídeo HTML5. Puedes <a href="clase.mp4">descargar el archivo de vídeo en
+                            formato MP4</a>.</p>
+                </video>
+
+                <!-- Pie descriptivo del vídeo -->
+                <figcaption>
+                    <strong>Vídeo 1:</strong> Videoclase técnica sobre reproductores accesibles y subtítulos WebVTT.
+                </figcaption>
+            </figure>
+        </section>
+
+        <!-- Sección del esquema gráfico -->
+        <section class="image-section">
+            <h2>Esquema de Arquitectura Web</h2>
+
+            <figure class="image-figure">
+                <!-- Contenedor picture con formato WebP y reserva en JPG -->
+                <picture>
+                    <source srcset="esquema-desktop.webp" type="image/webp">
+                    <img src="esquema-desktop.jpg" alt="Esquema de arquitectura de red" width="800" height="450"
+                        loading="lazy">
+                </picture>
+
+                <!-- Pie del esquema -->
+                <figcaption>
+                    <strong>Figura 1:</strong> Esquema de arquitectura web cliente-servidor.
+                </figcaption>
+            </figure>
+        </section>
+    </main>
+
+</body>
+
+</html>
